@@ -41,11 +41,9 @@ The program loads the matrix, builds a synthetic block right-hand side, runs bot
 
 ## Main code locations
 
-- Main GPU solver: [dr_bcg_cuda_sparse.cu](dr_bcg_cuda_sparse.cu:1003)
-  `dr_bcg_algorithm5(...)`
-- Benchmark / demo driver: [dr_bcg_cuda_sparse.cu](dr_bcg_cuda_sparse.cu:1143)
-  `main(...)`
-- Custom CUDA kernels used during QR post-processing: [dr_bcg_cuda_sparse.cu](dr_bcg_cuda_sparse.cu:843)
-  `extract_upper_triangle_kernel(...)` and [dr_bcg_cuda_sparse.cu](dr_bcg_cuda_sparse.cu:855)
-  `fix_qr_signs_kernel(...)`
-- Sample input matrices: [data]
+- Main GPU solver: `dr_bcg_algorithm5(...)` in `dr_bcg_cuda_sparse.cu`, starts at line `1003`
+- Benchmark / demo driver: `main(...)` in `dr_bcg_cuda_sparse.cu`, starts at line `1143`
+- Custom CUDA kernels used during QR post-processing:
+  `extract_upper_triangle_kernel(...)` in `dr_bcg_cuda_sparse.cu`, starts at line `843`
+  `fix_qr_signs_kernel(...)` in `dr_bcg_cuda_sparse.cu`, starts at line `855`
+- Sample input matrices: `data/`
